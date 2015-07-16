@@ -1,0 +1,30 @@
+---
+title: "README"
+output: html_document
+---
+
+## Description
+
+This application is to demonstrate the shiny features and usages. It's an application on user management. You can add a user, and the result is then showed in a table, followed by a bar plot on all users' sex. 
+
+## Startup
+
+To start the application, you could change your working directory to this application's root, where the server.R and the ui.R locates.
+
+Then you should load the shiny library and start this application like below:
+```{r startup}
+library(shiny)
+runApp()
+```
+
+If the shiny library is not installed, you must installed it first from CRAN, `install.packages("shiny")`.
+
+After the `runApp()` is executed, a window should be poped up if you are running it in RStudio. If you run it from the R commmand, the browser would be opened and this application be automatically opened. If by any reason this application is not opened, you can open it in your browser manally following the output from the `runApp` command.
+
+## Usage
+
+This application is divided to two panels, the left panel is used to add a new user. You could input a user name, select his or her sex, etc, then click the *Add User* button to add all this information. 
+
+After that, the input will be shown in the right panel. The right pannel is divided to two sections, the upper section is a table list all users. And the bottom section shows the summary of the users' sex and a bar plot.
+
+Add more users and play it around. You could also look into the `ui.R` and `server.R` to check how this works. The comments sitted by the code should be helpful.
