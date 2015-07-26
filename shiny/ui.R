@@ -20,6 +20,21 @@ shinyUI(pageWithSidebar(
     ),
     
     mainPanel(
+        withTags({
+            div(
+                HTML("<strong>Hint: </strong>"),
+                p("This is a simple user management application. It has the following functions"),
+                ol(
+                    li("add user"),
+                    li("show users in a table"),
+                    li("make statistics on user sex and show the result"),
+                    li("displays the sex bar plot")
+                ),
+                p("Fill the left-side form and add some users to validate that please! Have fun!")
+            )
+        }),
+        
+        hr(),
         
         # outupt a table
         tableOutput("userTable"),
